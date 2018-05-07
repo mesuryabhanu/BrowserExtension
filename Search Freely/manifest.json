@@ -1,0 +1,30 @@
+{
+
+  "manifest_version": 2,
+  "name": "Search Freely",
+  "version": "1.0",
+
+  "description": "Lets you search on Bing and Google wtih extra features",
+  "homepage_url": "https://www.google.com",
+  "icons": {
+    "48": "icons/icon48.png"
+  },
+
+  "permissions": [
+    "activeTab"
+  ],
+
+  "browser_action": {
+    "default_icon": "icons/icon48.png",
+    "default_title": "Search Freely",
+    "default_popup": "htmls/popup.html"
+  },
+  
+   "content_scripts": [
+   {
+     "matches": ["http://www.bing.com/search*", "https://www.bing.com/search*", "https://www.google.co.in/search*", "http://www.google.co.in/search*", "https://www.google.com/search*", "http://www.google.com/search*", "http://example.com/"],
+     "js": ["scripts/addElements.js"]
+   }
+ ]
+
+}
